@@ -51,7 +51,7 @@ class Trie {
 }
 
 
-exports.findAllSolutions = function(grid, dictionary) {
+const findAllSolutions = function(grid, dictionary) {
 	let solutions = new Set();
 	if(grid.length === 0 || dictionary.length === 0) {
 		return [];
@@ -115,6 +115,7 @@ exports.findAllSolutions = function(grid, dictionary) {
 	return [...solutions];
 };
 
+export default findAllSolutions;
 // var grid = [
 // 	["t", "w", "y", "r"],
 // 	["e", "n", "p", "h"],

@@ -56,7 +56,8 @@ exports.RandomGrid = function(size){
     grid[row] = [];
     for (let col = 0; col < size; ++col) {
       grid[row][col] = chars[size * row + col].toLowerCase();
-      if (grid[row][col] === "Q") grid[row][col] = "Qu";
+      if (grid[row][col] === "q") grid[row][col] = "qu";
+      if (grid[row][col] === "s") grid[row][col] = "st";
     }
   }
   return grid;
