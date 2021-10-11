@@ -3,7 +3,7 @@ import findAllSolutions from './boggle_solver.js';
 import Board from './Board.js';
 import GuessInput from './GuessInput.js';
 import FoundSolutions from './FoundSolutions.js';
-import RemainingSolutions from './RemainingSolutions.js';
+// import RemainingSolutions from './RemainingSolutions.js';
 import SummaryResults from './SummaryResults.js';
 import ToggleGameState from './ToggleGameState.js';
 import logo from './logo.png';
@@ -70,8 +70,8 @@ function App() {
         <div>
           <Board board={grid} />
           <SummaryResults words={foundSolutions} totalTime={totalTime} />
-          <FoundSolutions headerText="Solutions you've found" words={foundSolutions} />
-          <RemainingSolutions foundSolutions={foundSolutions} allSolutions={allSolutions} />
+            {/*<FoundSolutions headerText="Solutions you've found" words={foundSolutions} />*/}
+          <FoundSolutions headerText="Missed Words [wordsize > 3]: " words={allSolutions.filter(elem => !foundSolutions.includes(elem)).sort()}  />
         </div>
       }
     </div>
